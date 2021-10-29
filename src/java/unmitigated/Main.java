@@ -11,5 +11,15 @@ public class Main {
           } catch(Exception e) {
               e.printStackTrace();
           }
+        // It looks like JDK 17 bug for mee now, see:
+        File f = new File("/usr/local/bee/lib/bee.jar");
+          System.out.printf("Path %s\n", f.getName());
+          // same using reflection
+          try {
+             System.out.printf("Path(reflection) %s\n",  f.getClass().getMethod("getName").invoke(f));
+              // it works just fine, no an exception
+          } catch(Exception e) {
+              e.printStackTrace();
+          }
     }
 }

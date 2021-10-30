@@ -11,7 +11,7 @@ public class Main {
           } catch(Exception e) {
               e.printStackTrace();
           }
-        // It looks like JDK 17 bug for mee now, see:
+        // It looks like a JDK 17 bug for me now, see:
         File f = new File("/usr/local/bee/lib/bee.jar");
           System.out.printf("Path %s\n", f.getName());
           // same using reflection
